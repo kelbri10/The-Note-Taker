@@ -1,3 +1,5 @@
+const api = require('./routes/apiroutes'); 
+
 const $noteTitle = $(".note-title");
 const $noteText = $(".note-textarea");
 const $saveNoteBtn = $(".save-note");

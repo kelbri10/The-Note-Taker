@@ -5,8 +5,9 @@ const app = express();
 const PORT = process.env.PORT || 3000; 
 
 //Body Parser Middleware for JSON
-app.use(express.json())
-
+app.use(express.json()); 
+app.use(express.urlencoded({extended: true})); 
+app.use(express.static('public')); 
 
 //returns index.html to client-side 
 app.get('/', (req, res) => { 
@@ -14,7 +15,7 @@ app.get('/', (req, res) => {
 })
 
 //returns notes.html file to client-side 
-app.get('/notes.html', (req, res) => { 
+app.get('/notes', (req, res) => { 
     res.sendFile(path.join(__dirname, 'public', 'notes.html')); 
 })
 
