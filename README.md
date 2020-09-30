@@ -6,13 +6,14 @@
 3. [Installation](#Installation)
 4. [Getting Started](#GettingStarted)
 5. [Contributing](#Contributing)
-6. [Testing](#Testing)
-7. [Licensing](#Licensing)
-8. [Further Reading](#FurtherReading)
-9. [Author](#Author)
+6. [Licensing](#Licensing)
+7. [Further Reading](#FurtherReading)
+8. [Author](#Author)
 
 ## Description 
 Keeping track of everything in the day from thoughts to tasks can be difficult. Having an app to help would make organization way easier! With the Noter, you are able to write and save notes as well as delete previous notes.
+![No Saved Notes](nosaved.png)
+![Saved Notes](notesadded.png)
 
 ## Requirements 
 
@@ -26,7 +27,6 @@ To experience Noter and its functionality, check it out on [Heroku]().
 ## Contributing 
 All Contributions are welcome. 
 
-## Testing 
 
 ## Licensing 
 The Noter is released under the ISC License.
@@ -35,4 +35,4 @@ The Noter is released under the ISC License.
 To learn more about ExpressJS, check out there documentation [here](https://expressjs.com/). If reading isn't your cup of tea, check out Traversy Media's youtube video, [ExpressJS Crash Course](https://www.youtube.com/watch?v=L72fhGm1tfE).
 
 ## Author 
-This project was originally created by Kelsey Hughes. 
+This project was originally created by Kelsey Hughes. Check out their profile [here](https://github.com/kelbri10). 
