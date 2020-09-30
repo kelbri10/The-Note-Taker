@@ -53,6 +53,7 @@ router.delete('/:id', (req, res) => {
         if (err) throw err; 
     })
 
+
     res.json(savedNotes); 
 
 })
