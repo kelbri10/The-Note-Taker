@@ -18,10 +18,12 @@ router.post('/', (req, res) => {
 
     //creates new Note with request body 
     let newNote = req.body; 
+    
 
     //saves previous notes into array after reading db.json file
     let notes = JSON.parse(fs.readFileSync('./db/db.json', 'utf8')); 
-
+    newNote.id = (notes.length).toString(); 
+    
     notes.push(newNote); 
 
     //writes new array of notes into db.json
@@ -31,6 +33,11 @@ router.post('/', (req, res) => {
 
     //returns notes 
     res.json(newNote); 
+})
+
+//deletes note according to id
+router.delete('/:id', (req, res) => { 
+
 })
 
 
