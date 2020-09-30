@@ -21,9 +21,9 @@ router.post('/', (req, res) => {
     
 
     //saves previous notes into array after reading db.json file
-    let notes = JSON.parse(fs.readFileSync('./db/db.json', 'utf8')); 
+    let notes = JSON.parse(fs.readFileSync('./db/db.json', 'utf-8')); 
     newNote.id = (notes.length).toString(); 
-    
+
     notes.push(newNote); 
 
     //writes new array of notes into db.json
@@ -37,6 +37,23 @@ router.post('/', (req, res) => {
 
 //deletes note according to id
 router.delete('/:id', (req, res) => { 
+    //saves id to const variable 
+    const id = req.params.id; 
+
+    //reads db.json to pull notes 
+    let notes = JSON.parse(fs.readFileSync('./db/db.json', 'utf-8'))
+
+    //filters notes if do not equal the id
+    let savedNotes = notes.filter(note => {
+        return note.id !== id
+    }); 
+
+    //writes new JSON file with saved notes
+    fs.writeFileSync('./db/db.json', JSON.stringify(savedNotes), 'utf-8', (err) =>{ 
+        if (err) throw err; 
+    })
+
+    res.json(savedNotes); 
 
 })
 
