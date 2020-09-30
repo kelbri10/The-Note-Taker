@@ -15,8 +15,6 @@ Keeping track of everything in the day from thoughts to tasks can be difficult. 
 ![No Saved Notes](nosaved.png)
 ![Saved Notes](notesadded.png)
 
-## Requirements 
-
 ## Installation
 For the latest stable version of Express: 
 `npm install express`
